@@ -23,6 +23,24 @@ LIMIT 1);
 -- Weather Observation Station 6
 -- 1. a, e, i, o, or u로 시작하는 CITY NAME
 -- 2. 중복X
-SELECT 
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY RLIKE '^[aeiou]';
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY LIKE 'a%'
+OR CITY LIKE 'e%'
+OR CITY LIKE 'i%'
+OR CITY LIKE 'o%'
+OR CITY LIKE 'u%'
+;
+
+-- Weather Observation Station 7
+-- 1. a, e, i, o, or u로 끝나는 CITY NAME
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY RLIKE '[aeiou]$';
+
 
 
